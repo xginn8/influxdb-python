@@ -8,8 +8,13 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Added
 
 ### Changed
-- Pass through the "method" kwarg to DataFrameClient queries
 
+### Removed
+
+## [v5.2.1] - 2018-07-15
+### Added
+### Changed
+- Pass through the "method" kwarg to DataFrameClient queries
 ### Removed
 
 ## [v5.2.0] - 2018-07-10
