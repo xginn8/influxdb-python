@@ -59,7 +59,7 @@ On Debian/Ubuntu, you can install it with this command::
 Dependencies
 ------------
 
-The influxdb-python distribution is supported and tested on Python 2.7, 3.5, 3.6, PyPy and PyPy3.
+The influxdb-python distribution is supported and tested on Python 2.7, 3.5, 3.6, 3.7, PyPy and PyPy3.
 
 **Note:** Python <3.5 are currently untested. See ``.travis.yml``.
 
