@@ -23,7 +23,7 @@ import warnings
 from influxdb import InfluxDBClient
 from influxdb.exceptions import InfluxDBClientError
 
-from influxdb.tests import skipIfPYpy, using_pypy, skipServerTests
+from influxdb.tests import skip_if_pypy, using_pypy, skip_server_tests
 from influxdb.tests.server_tests.base import ManyTestCasesWithServerMixin
 from influxdb.tests.server_tests.base import SingleTestCaseWithServerMixin
 
@@ -120,7 +120,7 @@ dummy_point_without_timestamp = [
 ]
 
 
-@skipServerTests
+@skip_server_tests
 class SimpleTests(SingleTestCaseWithServerMixin, unittest.TestCase):
     """Define the class of simple tests."""
 
@@ -267,7 +267,7 @@ class SimpleTests(SingleTestCaseWithServerMixin, unittest.TestCase):
             InfluxDBClient('host', '80/redir', 'username', 'password')
 
 
-@skipServerTests
+@skip_server_tests
 class CommonTests(ManyTestCasesWithServerMixin, unittest.TestCase):
     """Define a class to handle common tests for the server."""
 
@@ -293,7 +293,7 @@ class CommonTests(ManyTestCasesWithServerMixin, unittest.TestCase):
         """Test writing points to the server."""
         self.assertIs(True, self.cli.write_points(dummy_point))
 
-    @skipIfPYpy
+    @skip_if_pypy
     def test_write_points_DF(self):
         """Test writing points with dataframe."""
         self.assertIs(
@@ -786,7 +786,7 @@ GROUP BY tag_1').get_points())
         self.cli.write_points(pts)
 
 
-@skipServerTests
+@skip_server_tests
 class UdpTests(ManyTestCasesWithServerMixin, unittest.TestCase):
     """Define a class to test UDP series."""
 
